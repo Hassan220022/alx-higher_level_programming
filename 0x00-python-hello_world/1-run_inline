@@ -1,9 +1,2 @@
 #!/bin/bash
-
-if [[ -z "${PYCODE}" ]]; then
-    echo "PYCODE is unset or set to the empty string"
-    exit 1
-fi
-
-# Run the Python code
-python -c "${PYCODE}"
+python3 -c "${PYCODE}"
