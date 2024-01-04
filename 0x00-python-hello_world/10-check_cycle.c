@@ -1,20 +1,31 @@
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * check_cycle - checks if a list is circular
- * @list: points to the first node
- * Return: 1 if list is circular or 0 if linear
+ * check_cycle - Checks if a singly-linked list contains a cycle.
+ * @list: A singly-linked list.
+ *
+ * Return: If there is no cycle - 0.
+ *         If there is a cycle - 1.
  */
-
 int check_cycle(listint_t *list)
 {
-	listint_t *current = list;
+	listint_t *slow, *fast;
 
-	while (current != NULL)
+	if (list == NULL || list->next == NULL)
+		return (0);
+
+	slow = list->next;
+	fast = list->next->next;
+
+	while (slow && fast && fast->next)
 	{
-		current = current->next;
-		if (current == list)
+		if (slow == fast)
 			return (1);
+
+		slow = slow->next;
+		fast = fast->next->next;
 	}
+
 	return (0);
 }
