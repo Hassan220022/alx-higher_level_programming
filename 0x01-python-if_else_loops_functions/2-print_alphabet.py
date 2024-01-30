@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 character = ""
 
-for i in range(97,123):
-    character = character + chr(i)
-
-print("abcdefghijklmnopqrstuvwxyz",end="")
-
+for letter in range(97, 123):
+    print("{}".format(chr(letter)), end="")
