@@ -1,9 +1,9 @@
 #!/usr/bin/pythone
 def max_integer(my_list=[]):
-    max = my_list[0]
-    if not max:
+    if not my_list:
         return None
     else:
+        max = my_list[0]
         for i in my_list:
             if max < i:
                 max = i
