@@ -6,4 +6,5 @@ def divisible_by_2(my_list=[]):
             bor3i.append(True)
         else:
             bor3i.append(False)
+    
     return (bor3i)
