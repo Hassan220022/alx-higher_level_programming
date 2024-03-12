@@ -1,5 +1,9 @@
 #include <Python.h>
 
+/**
+ * print_python_list - Prints information about a Python list.
+ * @p: A pointer to the Python list object.
+ */
 void print_python_list(PyObject *p)
 {
 	long int size, i;
@@ -19,6 +23,10 @@ void print_python_list(PyObject *p)
 	}
 }
 
+/**
+ * print_python_bytes - Prints information about a Python bytes object.
+ * @p: A pointer to the Python bytes object.
+ */
 void print_python_bytes(PyObject *p)
 {
 	long int size, i;
@@ -40,5 +48,7 @@ void print_python_bytes(PyObject *p)
 	else
 		printf("  first 10 bytes: ");
 	for (i = 0; i < size + 1 && i < 10; i++)
-		printf("%02hhx%s", trying_str[i], i + 1 < size + 1 && i + 1 < 10 ? " " : "\n");
+		printf("%02hhx%s",
+			trying_str[i],
+			i + 1 < size + 1 && i + 1 < 10 ? " " : "\n");
 }
