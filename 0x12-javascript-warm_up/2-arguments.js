@@ -3,5 +3,5 @@ const arg = process.argv.length;
 if (arg == 2) {
   console.log("No argument");
 } else {
-  console.log("Arugments found");
+  console.log("Arguments found");
 }
