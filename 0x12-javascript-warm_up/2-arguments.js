@@ -1,7 +1,10 @@
 #!/usr/bin/node
-const bor3i = process.argv[2];
-if (bor3i === undefined) {
+const args = process.argv.slice(2);
+
+if (args.length === 0) {
   console.log('No argument');
+} else if (args.length === 1) {
+  console.log('Argument found');
 } else {
-  console.log(bor3i);
+  console.log('Arguments found');
 }
