@@ -1,8 +1,7 @@
 #!/usr/bin/node
-// prints the first argument passed to it
-
-if (process.argv[2] === undefined) {
+let bor3i = process.argv[2];
+if (bor3i === undefined) {
   console.log('No argument');
 } else {
-  console.log(process.argv[2]);
+  console.log(bor3i);
 }
