@@ -1,4 +1,4 @@
-git#!/usr/bin/node
+#!/usr/bin/node
 
 const myObject = {
   type: 'object',
