@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const times = process.arg[2];
+const times = process.argv[2];
 if (times === undefined) {
   console.log('Missing number of occurrences');
 } else {
