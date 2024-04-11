@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let bor3i = process.argv[2];
+const bor3i = process.argv[2];
 if (bor3i === undefined) {
   console.log('No argument');
 } else {
