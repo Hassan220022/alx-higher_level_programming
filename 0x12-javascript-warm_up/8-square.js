@@ -1,13 +1,12 @@
 #!/usr/bin/node
 
-const times = process.argv[2];
-if (times === undefined) {
+const times = parseInt(process.argv[2]);
+if (isNaN(times)) {
   console.log('Missing size');
 } else {
   for (let i = 0; i < times; i++) {
     for (let i = 0; i < times; i++) {
-      process.stdout.write('x');
+      console.log('X'.repeat(times));
     }
-    console.log();
   }
 }
