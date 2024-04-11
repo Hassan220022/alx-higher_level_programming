@@ -5,8 +5,6 @@ if (isNaN(times)) {
   console.log('Missing size');
 } else {
   for (let i = 0; i < times; i++) {
-    for (let i = 0; i < times; i++) {
-      console.log('X'.repeat(times));
-    }
+    console.log('X'.repeat(times));
   }
 }
