@@ -17,7 +17,7 @@ class Rectangle {
   }
 
   double () {
-    for (let i = 0; i < this.height * 2; i++) { console.log('X'.repeat(this.width * 2)); }
+    for (let i = 0; i < (this.height * 2); i++) { console.log('X'.repeat(this.width * 2)); }
   }
 }
 
