@@ -1,9 +1,6 @@
 #!/usr/bin/node
 
-const { list } = require("./100-data");
+const list = require('./100-data').list;
 
-for (let i = 0; i < list.length;i++)
-{
-    list[i] *= i;
-}
-return (list);
+console.log(list);
+console.log(list.map((value, index) => value * index));
