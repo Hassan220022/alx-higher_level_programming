@@ -4,20 +4,18 @@
 
 class Square:
     """
-    Class that defines properties of square by: (based on 5-square.py).
+    Class that defines properties of square by: (based on 3-square.py).
 
     Attributes:
         size: size of a square (1 side).
     """
-    def __init__(self, size=0, position=(0, 0)):
+    def __init__(self, size=0):
         """Creates new instances of square.
 
         Args:
-            __size (int): size of the square (1 side).
-            __position (tuple): position of the square.
+            size: size of the square (1 side).
         """
-        self.size = size
-        self.position = position
+        self.__size = size
 
     def area(self):
         """Calculates the area of square.
@@ -40,63 +38,78 @@ class Square:
             value (int): size of a square (1 side).
 
         Raises:
-            TypeError: size must be an integer.
-            ValueError: size must be >= 0.
+            TypeError: size must be an integer
+            ValueError: size must be >= 0
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
+        else:
+            self.__size = value
 
-    @property
-    def position(self):
-        """Returns the position of the square
-        """
-        return self.__position
-
-    @position.setter
-    def position(self, value):
-        """Property setter for position.
+    def __lt__(self, other):
+        """Rich comparison operator to compare if square area is less
+        than another.
 
         Args:
-            value (tuple): position of the square.
+            other (Square): square to compare size to.
 
-        Raises:
-            TypeError: position must be a tuple of 2 positive integers
+        Returns: True or false.
         """
-        if not isinstance(value, tuple):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(value[0], int) or not isinstance(value[1], int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if value[0] < 0 or value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
+        return self.__size < other.__size
 
-    def my_print(self):
-        """prints in stdout the square with the character #
+    def __le__(self, other):
+        """Rich comparison operator to compare if square area is less
+        than or equal to another.
+
+        Args:
+            other (Square): square to compare size to.
+
+        Returns: True or false.
         """
+        return self.__size <= other.__size
 
-        if self.__size == 0:
-            print()
-        else:
-            for j in range(self.__position[1]):
-                print()
-            for i in range(self.__size):
-                for k in range(self.__position[0]):
-                    print(" ",  end="")
-                print("#" * (self.__size))
+    def __eq__(self, other):
+        """Rich comparison operator to compare if square area is equal to
+        another.
 
-    def __str__(self):
-        """Prints square offsetting it by position with symbol #
+        Args:
+            other (Square): square to compare size to.
 
-        Returns: The square.
+        Returns: True or false
         """
-        if self.__size == 0:
-            return ''
-        new_lines = '\n' * self.position[1]
-        spaces = ' ' * self.position[0]
-        hashes = '#' * self.size
-        return new_lines + '\n'.join(spaces + hashes for e in range(self.size))
+        return self.__size == other.__size
+
+    def __ne__(self, other):
+        """Rich comparison operator to compare if square area is not
+        equal to another.
+
+        Args:
+            other (Square): square to compare size to.
+
+        Returns: True or false
+        """
+        return self.__size != other.__size
+
+    def __gt__(self, other):
+        """Rich comparison operator to compare if square area is greater
+        than another.
+
+        Args:
+            other (Square): square to compare size to.
+
+        Returns: True or false
+        """
+        return self.__size > other.__size
+
+    def __ge__(self, other):
+        """Rich comparison operator to compare if square area is greater
+        than or equal to another.
+
+        Args:
+            other (Square): square to compare size to.
+
+        Returns: True or false
+        """
+        return self.__size >= other.__size
