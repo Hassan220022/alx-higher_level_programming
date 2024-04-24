@@ -1,19 +1,22 @@
 #!/usr/bin/python3
-"""Class that defines a square with private instance attribute size and public instance method area."""
+"""
+Class that defines a square with private
+instance attribute size and public instance method area.
+"""
+
 
 class Square:
     """Class that defines a square.
-    
     Attributes:
         size (int): The size of a side of the square.
     """
-    
+
     def __init__(self, size=0):
         """Initialize a new Square with optional size.
-        
+
         Args:
             size (int): The size of a side of the square (default is 0).
-        
+
         Raises:
             TypeError: If size is not an integer.
             ValueError: If size is less than 0.
@@ -28,10 +31,10 @@ class Square:
     @size.setter
     def size(self, value):
         """Set the size of the square.
-        
+
         Args:
             value (int): The new size of the square.
-        
+
         Raises:
             TypeError: If value is not an integer.
             ValueError: If value is less than 0.
