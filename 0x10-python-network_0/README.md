@@ -42,7 +42,7 @@ Plagiarism is strictly prohibited. All submitted work must be original.
 
 ## Repository
 
-- **GitHub repository:** [alx-higher_level_programming](https://github.com)
+- **GitHub repository:** [alx-higher_level_programming](https://github.com/Hassan220022/alx-higher_level_programming)
 - **Directory:** 0x10-python-network_0
 
 For detailed project descriptions and further instructions, refer to the GitHub repository tasks.
