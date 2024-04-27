@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This module includes a function that finds a peak element in a list of unsorted integers.
+This module includes a function that finds a peak 
+element in a list of unsorted integers.
 """
 
 
