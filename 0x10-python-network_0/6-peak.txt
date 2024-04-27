@@ -1,2 +1,2 @@
-The function find_peak uses a binary search algorithm to find a peak in the list.
-This results in a time complexity of O(log(n)).
+for a list of A LOT OF integers => complexity should be the lowest
+
