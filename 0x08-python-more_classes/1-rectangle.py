@@ -1,23 +1,23 @@
 #!/usr/bin/python3
-"""
-Defines a class Rectangle with properties for width and height,
-ensuring they are integers and that width and height are non-negative.
-"""
+"""A module for the rectangle class"""
+
 
 class Rectangle:
+    """A rectangular class"""
+
     def __init__(self, width=0, height=0):
-        """ instantiation method for object creation """
+        """Instatiation of a new Rectangle"""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """ getter for width attribute"""
-        return self.__width
+        """retrieves of width"""
+        return (self.__width)
 
     @width.setter
     def width(self, value):
-        """ setter for width attribute"""
+        """setting of width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -26,12 +26,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """ getter for height attribute"""
-        return self.__height
+        """retrieves the height"""
+        return (self.__height)
 
     @height.setter
     def height(self, value):
-        """ setter for height attribute"""
+        """setting the height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
