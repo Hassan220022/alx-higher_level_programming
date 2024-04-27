@@ -1,17 +1,19 @@
 #!/usr/bin/python3
-""" Import necessary libraries """
-import sys
+"""
+ Python script that takes in a URL, sends a request to the URL
+ and manage HTTP Errors
+"""
 import urllib.request
-
+import sys
 
 if __name__ == "__main__":
-    # Extract URL from the command line argument
-    url = sys.argv[1]
-    
-    """ Send a request to the specified URL and handle HTTP errors """
+
+    req = urllib.request.Request(sys.argv[1])
+
     try:
-        # Attempt to open the URL and read the response
-        with urllib.request.urlopen(url) as response:
-            print(response.read().decode('utf-8'))
+        with urllib.request.urlopen(req) as res:
+            reqst = res.read().decode('utf8')
+        print(reqst)
+
     except urllib.error.HTTPError as err:
         print("Error code: {}".format(err.code))
