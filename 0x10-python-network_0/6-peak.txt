@@ -1,1 +1,1 @@
-The time complexity of the find_peak function is O(log(n)), because it uses a binary search approach.
+The function find_peak uses a binary search algorithm to find a peak in the list. This results in a time complexity of O(log(n)).
