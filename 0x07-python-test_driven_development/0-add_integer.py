@@ -5,6 +5,7 @@ The function ensures that the inputs are either integers or floats,
 casting floats to integers before performing the addition.
 """
 
+
 def add_integer(a, b=98):
     """Return the addition of a and b, or errors if input types are invalid."""
     if type(a) not in [int, float]:
