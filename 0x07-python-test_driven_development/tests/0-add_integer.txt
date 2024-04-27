@@ -1,0 +1,5 @@
+Test the add_integer function with various types of inputs:
+1. With integers: add_integer(1, 2) -> 3
+2. With a float and an integer: add_integer(100.3, -2) -> 98
+3. With a string (should raise TypeError): add_integer(4, "School")
+4. With `None` as input (should raise TypeError): add_integer(None)
