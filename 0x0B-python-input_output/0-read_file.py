@@ -18,7 +18,7 @@ def read_file(filename=""):
     """
     try:
         with open(filename, "r", encoding="UTF-8") as f:
-            print(f.read(), end="")
+            print(f.read(), end="\n")
     except FileNotFoundError:
         print(f"Error: The file '{filename}' does not exist.")
     except IOError as e:
