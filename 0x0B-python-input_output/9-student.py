@@ -18,4 +18,3 @@ class Student:
         """retrieves a dictionary representation of student instance
         """
         return vars(self)
-    
